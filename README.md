@@ -1,6 +1,7 @@
 # algobridge
 algobridge is the proposed implementation of a bridge between Algorand and EVM chains (Ethereum Mainnet, Optimism, Arbitrum or Polygon) to enable the bridging of NFTs between chains.
 By leveraging platform native representation of non-fungible tokens as either ERC-721s(EVM) or ASAs(AVM) the bridge would enable composability with other apps. 
+![proposed bridge structure diagram](https://i.imgur.com/xzzbi06.png)
 ## Technical Overview
 As seen in the diagram, the proposed initial structure of the bridge would consist of a trusted setup so that using a multisig-like structure assets can be sent to addresses on each network and subsequently minted and transferred to the user on the other. Time limitations precluded us from delving deeper into the implementation of other more secure possibilities like an optimistic-like implementation of the bridge. 
 The different authorized actors of the multisig would constantly poll the blockchains data or in the case of Ethereum and other compatible chains use The Graph to react to the transfer of assets accordingly. 
